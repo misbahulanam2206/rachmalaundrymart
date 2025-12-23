@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachma Laundry Mart</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7e22ce', // ungu
+            secondary: '#dc2626', // merah
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .btn-main{background:#dc2626;color:white;}
+    .btn-main:hover{background:#b91c1c;}
+    .card-hover:hover{transform:translateY(-5px);transition:0.3s;}
+  </style>
+</head>
+<body class="bg-gray-50 text-gray-800" onload="welcome()">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md fixed w-full z-10">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-secondary">Rachma Laundry Mart</h1>
+      <img src="img/logo .jpg"  class="w-16 h-17" alt="Logo Rachma Laundry Mart" />
+      <ul class="flex space-x-6 font-medium">
+        <li><a href="#home" class="hover:text-secondary">Home</a></li>
+        <li><a href="#services" class="hover:text-secondary">Layanan</a></li>
+        <li><a href="#pricing" class="hover:text-secondary">Maps</a></li>
+        <li><a href="#contact" class="hover:text-secondary">Kontak</a></li>
+      </ul>
+    </div>
+  </nav>
+
+
+  <!-- Hero Section -->
+  <section id="home" class="pt-28 pb-20 bg-gradient-to-r from-primary to-secondary text-white">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h2 class="text-4xl md:text-5xl font-bold mb-4">Laundry Bersih, Wangi & Elegan</h2>
+      <p class="text-lg mb-8">Solusi laundry modern dengan pelayanan cepat dan profesional</p>
+      <button onclick="alert('Terima kasih! Kami akan segera menghubungi Anda.')" class="bg-white text-secondary px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition">Pesan Sekarang</button>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-20">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Layanan Kami</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover">
+          <h4 class="text-xl font-semibold mb-2">Cuci Kering</h4>
+          <p>Pakaian bersih dan rapi dengan standar kualitas tinggi.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover">
+          <h4 class="text-xl font-semibold mb-2">Cuci Setrika</h4>
+          <p>Hasil wangi, licin, dan siap pakai.</p>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover">
+          <h4 class="text-xl font-semibold mb-2">Laundry Express</h4>
+          <p>Selesai dalam hitungan jam untuk kebutuhan mendesak.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- Products -->
+  <section id="products" class="py-20 bg-gray-100">
+    <div class="max-w-7xl mx-auto px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Produk Peralatan Laundry</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover text-center">
+          <h4 class="text-xl font-semibold mb-2">Deterjen Laundry</h4>
+          <p class="mb-4">Deterjen berkualitas tinggi, membersihkan maksimal dan lembut di pakaian.</p>
+          <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary">Beli</button>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover text-center">
+          <h4 class="text-xl font-semibold mb-2">Pewangi Laundry</h4>
+          <p class="mb-4">Aroma tahan lama, memberikan kesan bersih dan segar.</p>
+          <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary">Beli</button>
+        </div>
+        <div class="bg-white p-6 rounded-2xl shadow hover:shadow-lg transition card-hover text-center">
+          <h4 class="text-xl font-semibold mb-2">Plastik & Hanger Laundry</h4>
+          <p class="mb-4">Perlengkapan laundry rapi dan profesional.</p>
+          <button class="bg-primary text-white px-6 py-2 rounded-full hover:bg-secondary">Beli</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Maps -->
+  <section id="Maps" class="py-20">
+    <div class="max-w-4xl mx-auto">
+    <h2 class="text-3xl font-bold text-center mb-6">Lokasi Kami</h2>
+      <div style="text-align:center; margin-top:10px;">
+        <a 
+          href="https://www.google.com/maps/search/?api=1&query=Rachma+Laundry+Mart"
+          target="_blank"
+          style="background:#dc2626;color:white;padding:10px 20px;border-radius:20px;text-decoration:none;">
+          📍 Buka di Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-20">
+    <div class="max-w-7xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-6">Hubungi Kami</h3>
+      <p class="mb-4">📍 Kp lio RT 006 Rw 019 no61 B Kota Depok Pancoran Mas</p>
+      <p class="mb-4">📞 0857-1298-7757</p>
+      <p class="mb-6">⏰ Buka setiap hari 08.00 - 20.00</p>
+      <button onclick="window.open('https://wa.me/6285712987757','_blank')" class="bg-primary text-white px-8 py-3 rounded-full hover:bg-secondary transition">Chat WhatsApp</button>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 text-white py-6 text-center">
+    <p>© 2025 Rachma Laundry Mart. All rights reserved.</p>
+  </footer>
+
+<script>
+  function welcome(){
+    console.log('Selamat datang di Rachma Laundry Mart');
+  }
+</script>
+</body>
+</html>
