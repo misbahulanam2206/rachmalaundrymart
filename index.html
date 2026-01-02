@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Rachma Laundry Mart</title>
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#7e22ce',
+            secondary: '#dc2626',
+          }
+        }
+      }
+    }
+  </script>
+
+  <style>
+    .card-hover:hover {
+      transform: translateY(-6px);
+      transition: 0.3s;
+    }
+  </style>
+</head>
+
+<body class="bg-gray-50 text-gray-800">
+
+<!-- NAVBAR -->
+<nav class="bg-white shadow-md fixed w-full z-10">
+  <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <img src="img/logo .jpg" alt="Rachma Laundry Mart Logo" class="h-10 w-10">
+    <h1 class="text-2xl font-bold text-secondary"class="border-left">Rachma Laundry Mart</h1>
+    <ul class="flex space-x-6 font-medium">
+      <li><a href="home.html" class="hover:text-secondary">Home</a></li>
+      <li><a href="#services" class="hover:text-secondary">Layanan</a></li>
+      <li><a href="#products" class="hover:text-secondary">Produk</a></li>
+      <li><a href="contact.html" class="hover:text-secondary">Kontak</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section id="home" class="pt-28 pb-20 bg-gradient-to-r from-primary to-secondary text-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl md:text-5xl font-bold mb-4">
+      Laundry Bersih, Wangi & Profesional
+    </h2>
+    <p class="text-lg mb-8">
+      Melayani laundry kiloan & penjualan peralatan laundry
+    </p>
+    <button onclick="order('Layanan Laundry')" 
+      class="bg-white text-secondary px-8 py-3 rounded-full font-semibold hover:bg-gray-100">
+      Pesan Sekarang
+    </button>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services" class="py-20">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">Layanan Kami</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div class="bg-white p-6 rounded-2xl shadow card-hover">
+        <h4 class="text-xl font-semibold mb-2">Cuci Kering</h4>
+        <p>Pakaian bersih & rapi.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow card-hover">
+        <h4 class="text-xl font-semibold mb-2">Cuci Setrika</h4>
+        <p>Wangi dan siap pakai.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow card-hover">
+        <h4 class="text-xl font-semibold mb-2">Laundry Express</h4>
+        <p>Selesai dalam hitungan jam.</p>
+      </div>
+
+      <div class="bg-white p-6 rounded-2xl shadow card-hover text-center">
+        <h4 class="text-xl font-semibold mb-2">Antar Jemput</h4>
+        <p>bisa diantar jemput juga loh .</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
+<section id="products" class="py-20 bg-gray-100">
+  <div class="max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12">
+      Produk & Peralatan Laundry
+    </h3>
+
+    <div class="grid md:grid-cols-3 gap-8">
+
+      <div onclick="order('Deterjen Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/sabun.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Deterjen Laundry</h4>
+        <p>Deterjen khusus laundry profesional.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Pewangi Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/pewangi.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Pewangi Laundry</h4>
+        <p>Aroma segar dan tahan lama.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Mesin Cuci Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/mesin-cuci.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Mesin Cuci Laundry</h4>
+        <p>Kapasitas besar & hemat listrik.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Mesin Pengering Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/pengering.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Mesin Pengering</h4>
+        <p>Pengering cepat & aman.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Setrika Uap Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/setrika uap.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Setrika Uap</h4>
+        <p>Hasil rapi & cepat.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Plastik & Hanger Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/hanger.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Plastik & Hanger</h4>
+        <p>Perlengkapan laundry profesional.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+
+      <div onclick="order('Plastik & Hanger Laundry')" 
+        class="bg-white p-6 rounded-2xl shadow card-hover cursor-pointer text-center">
+        <img src="img/stroller.jpg" class="h-40 w-full object-cover rounded-xl mb-4">
+        <h4 class="text-xl font-semibold mb-2">Cuci Stroller</h4>
+        <p>Cuci stroller dengan kualitas terbaik.</p>
+        <button class="mt-4 bg-primary text-white px-6 py-2 rounded-full">
+          Beli / Tanya
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="py-20 text-center">
+  <h3 class="text-3xl font-bold mb-6">Hubungi Kami</h3>
+  <p class="mb-2">📍 Depok, Pancoran Mas</p>
+  <p class="mb-2">📞 0857-1298-7757</p>
+  <p class="mb-6">⏰ 06.00 - 20.00</p>
+
+  <button onclick="order('Info Laundry')" 
+    class="bg-secondary text-white px-8 py-3 rounded-full hover:bg-red-700">
+    Chat WhatsApp
+  </button>
+</section>
+
+<!-- FOOTER -->
+<footer class="bg-gray-900 text-white py-6 text-center">
+  © 2025 Rachma Laundry Mart
+</footer>
+
+<!-- SCRIPT -->
+<script>
+  function order(product) {
+    let phone = "6285712987757";
+    let message = `Halo Rachma Laundry Mart, saya ingin tanya tentang ${product}`;
+    window.open(
+      `https://wa.me/${phone}?text=${encodeURIComponent(message)}`,
+      "_blank"
+    );
+  }
+</script>
+
+</body>
+</html>
